@@ -11,6 +11,7 @@ pipeline {
             steps {
                 sh 'mvn --version'
                 sh 'mvn clean install'
+                sh 'java -jar /home/slave-1/workspace/Parcel-service_feature-2/target/simple-parcel-service-app-1.0-SNAPSHOT.jar &'
             }
         } 
         stage('deploy') {
